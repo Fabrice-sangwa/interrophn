@@ -1,6 +1,6 @@
 package com.instero.www;
 
-public class Article {
+public class Article implements Exportable{
 
     protected int code;
     protected  String nom;
@@ -24,5 +24,15 @@ public class Article {
     @Override
     public String toString() {
         return this.code + " " + this.nom;
+    }
+
+    @Override
+    public double droitDouane() {
+        return 0;
+    }
+
+    @Override
+    public String paysDestination() {
+        return null;
     }
 }

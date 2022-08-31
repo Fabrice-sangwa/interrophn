@@ -12,10 +12,16 @@ public class Magasin {
         this.articleList = articleList;
         this.idMagasin = idMagasin;
     }
-
-
-
-
-
-
+    
+    public void add(Article article){
+        articleList.add(article);
+    }
+    
+    public boolean contains(Article article){
+        for(Article art : articleList) {
+            if (article == art)
+                return true;
+        }
+        return false;
+    }
 }
